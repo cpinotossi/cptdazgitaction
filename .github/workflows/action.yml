@@ -35,4 +35,4 @@ jobs:
       uses: azure/CLI@v2.0.0
       with:
         inlineScript: |
-          az storage blob upload --account-name ${{vars.STORAGE_NAME}} --container-name ${{vars.STORAGE_NAME}} --file ./test.txt --name test.txt --auth-mode login
+          az storage blob sync --account-name ${{vars.STORAGE_NAME}} -c ${{vars.STORAGE_NAME}} -s ./data
