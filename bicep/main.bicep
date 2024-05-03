@@ -22,9 +22,6 @@ resource sab 'Microsoft.Storage/storageAccounts/blobServices@2021-06-01' = {
 resource sac 'Microsoft.Storage/storageAccounts/blobServices/containers@2021-06-01' = {
   parent: sab
   name: storageName
-  properties: {
-    publicAccess: 'Blob'
-  }
 }
 
 var roleStorageBlobDataContributorName = 'ba92f5b4-2d11-453d-a403-e96b0029c9fe' //Storage Blob Data Contributor
